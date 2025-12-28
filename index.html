@@ -144,6 +144,11 @@
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
+            animation: in 2s ease forwards;
+        }
+        @keyframes in {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
         .side-panel span {cursor: pointer;}
         .panel {width: 35px; height: 35px;}
@@ -167,47 +172,29 @@
             background-image: url("article-icon.svg");
             background-size: cover;
         }
-        .menu {
-            width: 50px;
-            height: 50px;
+        #contlist {
+            width: 100px;
+            height: 60px;
             position: absolute;
-            top: 10px;
-            right: 20px;
             display: flex;
-            flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            cursor: pointer;
-        }
-        .menu:focus .lmenu {animation: omenu 0.5s ease forwards;}
-        .menu:not(:focus) .lmenu {animation: cmenu 0.5s ease forwards;}
-        .lmenu {
-            width: 20%;
-            height: 20%;
-            background-color: black;
-            cursor: pointer;
-        }
-        @keyframes omenu {
-            from {width: 20%; height: 20%;}
-            to {width: 80%; height: 20%;}
-        }
-        @keyframes cmenu {
-            from {width: 80%; height: 20%;}
-            to {width: 20%; height: 20%;}
+            flex-direction: column;
+            right: 110px;
+            top: 300px;
+            display: none;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            z-index: 3;
         }
     </style>
 </head>
 <body>
     <div class="wm">Aweb designer</div>
     <div class="upper-menu">
-        <div>Utama</div>
-        <div>Tentang</div>
+        <div onclick="window.location.href = 'index.html';" style="color: blue">Utama</div>
+        <div onclick="window.location.href = 'tentang.html';" >Tentang</div>
         <div class="kontak" onclick="kntk()">Contact</div>
-    </div>
-    <div class="menu" tabindex="0">
-        <div class="lmenu"></div>
-        <div class="lmenu"></div>
-        <div class="lmenu"></div>
     </div>
     <div id="dropdown-contact">
         <div class="dc-item">whatsapp ></div>
@@ -218,11 +205,16 @@
     <div class="under-matcha-txt"><b>Developing A Website</b></div>
     <div class="upper-matcha-txt"><b>With AVE</b></div>
     <div class="side-panel">
-        <span><div class="panel utama"></div>Utama</span>
-        <span><div class="panel tentang"></div>Tentang</span>
-        <span><div class="panel contact"></div>Contact</span>
+        <span><div onclick="window.location.href = 'index.html';" class="panel utama"></div>Utama</span>
+        <span><div onclick="window.location.href = 'tentang.html';" class="panel tentang"></div>Tentang</span>
+        <span><div onclick="kntk1()" class="panel contact"></div>Contact</span>
         <span><div class="panel store"></div>Store</span>
         <span><div class="panel article"></div>Article</span>
+    </div>
+    <div id="contlist">
+        <div class="cli">< whatsapp</div>
+        <div class="cli">< email</div>
+        <div class="cli">< instagram</div>
     </div>
     <p class="txt1">Alwi Danuar</p>
     <p class="sub-txt1">Beginner FrontEnd Developer</p>
@@ -241,6 +233,16 @@
         function kntk() {
             menuOpen = !menuOpen; // Toggle status
             const contact = document.getElementById("dropdown-contact");
+            if (menuOpen) {
+                contact.style.display = 'block'; // Buka menu
+
+            } else {
+                contact.style.display = 'none'; // Tutup menu
+            }
+        }
+        function kntk1() {
+            menuOpen = !menuOpen; // Toggle status
+            const contact = document.getElementById("contlist");
             if (menuOpen) {
                 contact.style.display = 'block'; // Buka menu
 
