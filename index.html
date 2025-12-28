@@ -187,6 +187,17 @@
             backdrop-filter: blur(5px);
             z-index: 3;
         }
+        
+        @media (max-width: 575px) {
+            .upper-menu {width: 50%; left: 50%; font-size: 14px;}
+            .side-panel {position: fixed; z-index: 4; backdrop-filter: blur(5px);}
+            .txt1 {font-size: 30px; top: 50px;}
+            .sub-txt1 {font-size: 10px; top: 20px;}
+            .img {right: 60px; width: 300px; height: 300px; top: 200px; opacity: 85%;}
+            .under-matcha-txt {font-size: 25px; top: 270px; right: 150px; text-shadow: -2px 0px  black;}
+            .upper-matcha-txt {font-size: 35px; top: 380px; right: 100px; text-shadow: 2px 0px black;}
+            .social-area {position: fixed;}
+        }
     </style>
 </head>
 <body>
