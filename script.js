@@ -14,6 +14,12 @@ function updateWaktu() {
     document.getElementById('waktu').innerHTML = formatWaktu;
 }
 
+updateWaktu();
 setInterval(updateWaktu, 1000);
 
-updateWaktu();
+const tahunSaatini = new Date().getFullYear();
+document.getElementById("tahun").innerHTML = tahunSaatini;
+
+const tahunsekarang = new Date().getFullYear();
+const hasil = tahunsekarang - 2008;
+document.getElementById("usia").innerHTML = hasil;
