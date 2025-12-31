@@ -124,6 +124,7 @@ section {height: 700px;}
     height: 200px;
     border-radius: 0 20px 0 20px;
     padding: 10px;
+    display: inline-block;
 }
 
 /*area bawah*/
@@ -148,3 +149,4 @@ section {height: 700px;}
 .as{background-image: url("store-icon.svg"); background-size: cover;}
 .em{background-image: url("email-icon.svg"); background-size: cover;}
 .yt{background-image: url("yt-icon.svg"); background-size: cover;}
+
