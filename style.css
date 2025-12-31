@@ -119,9 +119,7 @@ section {height: 700px;}
 }
 .flex-field fieldset {
     border: none;
-    box-shadow: 0 0 20px 2px rgb(94, 0, 0);
     width: 40%;
-    border-radius: 0 20px 0 20px;
     padding: 10px;
     display: inline-block;
 }
@@ -148,5 +146,6 @@ section {height: 700px;}
 .as{background-image: url("store-icon.svg"); background-size: cover;}
 .em{background-image: url("email-icon.svg"); background-size: cover;}
 .yt{background-image: url("yt-icon.svg"); background-size: cover;}
+
 
 
