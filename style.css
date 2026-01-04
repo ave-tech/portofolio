@@ -97,7 +97,7 @@ section {height: 700px;}
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    left: 10vh;
+    left: 20px;
     width: 500px;
     height: 500px;
 }
@@ -124,25 +124,38 @@ section {height: 700px;}
     padding: 10px;
     display: inline-block;
 }
-
-/*credit*/
-
-.alpha {
-    background-image: url("alpha.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 700px;
-    height: 400px;
-    position: absolute;
-    left: 25vw;
-}
-.credit1 {
-    display: flex;
-    justify-content: space-around;
+.flex-next-about {
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 20px;
+}
+.flex-next-about fieldset {
+    display: inline-block;
+    width: 40%;
+    border: none;
+    box-shadow: 0 0 15px 2px black;
+    border-radius: 20px;
+    padding: 10px;
     font-family: monospace;
 }
-
+.fr {
+    display: inline-block;
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    top: 50px;
+    left: 25%;
+    font-family: monospace;
+}
+.kosong {
+    position: relative;
+    width: 100vw;
+    height: 250px;
+}
 /*area bawah*/
 
 .panel {
