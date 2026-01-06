@@ -4,13 +4,14 @@
 .ad {
     backdrop-filter: blur(5px);
     position: fixed;
-    height: 45px;
+    height: 20px;
     color: green;
     font-family: cursive;
     left: 20px;
-    padding-top: 10px;
+    top: 10px;
     display: inline-block;
     cursor: alias;
+    z-index: 5;
 }
 #waktu {
     position: fixed;
@@ -178,3 +179,16 @@ section {height: 700px;}
 .as{background-image: url("store-icon.svg"); background-size: cover;}
 .em{background-image: url("email-icon.svg"); background-size: cover;}
 .yt{background-image: url("yt-icon.svg"); background-size: cover;}
+
+@media (max-width: 575px) {
+    .matcha { display: none; }
+    .txt-front-matcha { display: none; }
+    .txt-back-matcha { display: none; }
+    .knight { display: none; }
+    nav { width: 200px; }
+    .box-about {left: 5%; width: 90%; height: 700px; padding: 0px;}
+    .box-about p { padding: 20px; }
+    .flex-field { justify-content: space-between; }
+    .panel { width: 90%; left: 5%; }
+    .kosong { height: 1000px; }
+}
