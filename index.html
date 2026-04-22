@@ -1,22 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
+    <title>AVE Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-    <div class="txt-portofolio" id="text-ijo">Portofolio</div>
-    <div class="waktu" id="text"></div>
-    <div onclick="darkMode()" id="theme-mode-btn" class="theme-mode-btn"></div>
-    <div class="menu-btn">
-        <div class="ml1 menu-line"></div>
-        <div class="ml2 menu-line"></div>
-        <div class="ml3 menu-line"></div>
+<body>
+    <nav class="nav-global">
+        <a href="#utama">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#promo">Promo</a>
+        <a href="#order">Order</a>
+        <a href="#kontak">Contact</a>
+    </nav>
+    <div class="title glass-white">
+        <div class="txt-ave glass-white">AVE Store</div>
+        <div class="ave glass-white"></div>
     </div>
-
+    <div onclick="am()" class="mmenu glass-white">menu</div>
+    <div id="menu" class="menu">
+        <div class="mn glass-black">
+            <div onclick="cm()" class="ttup"></div>
+            <a href="DevFun.html" class="cmenu">Dev. Fun</a>
+            <a href="creative.html" class="cmenu">design creative</a>
+            <a href="snk.html" class="cmenu">Syarat & Ketentuan</a>
+        </div>
+    </div>
+    <section id="utama">
+        <div class="bg-set">
+            <div class="txt1">Beli Semua Kebutuhan Anda Hanya di <b><u>AVE Store</u></b></div>
+            <div id="item1">
+                Banyak Penawaran <b><u>Keren!</u></b>
+                <div class="txt-off1">Top up Semua Kebutuhan Game <b><u><i>Terlengkap</i></u></b></div>
+                <div class="img1"></div>
+            </div>
+            <div id="item2">
+                Harga Sangat Terjangkau!
+                <div class="txt-off2">Pembuatan Website <b><u><i>1 Bulan Pertama gratis Revisi!</i></u></b></div>
+                <div class="img2"></div>
+            </div>
+            <div id="item3">
+                Pelayanan Cepat & tanpa Ribet
+                <div class="txt-off3">Lebih hemat Belajar Bersama <b><u><i>Cek Selengkapnya di Promo</i></u></b></div>
+                <div class="img3"></div>
+            </div>
+            <div id="item4">
+                Kepuasan Client Yang Utama
+                <div class="txt-off4">Buat Semua Gambar Design mu Jadi <b><u><i>Lebih Keren!</i></u></b></div>
+                <div class="img4"></div>
+            </div>
+            <div id="item5">
+                Terpercaya 100%
+                <div class="txt-off5">Bisa Melakukan Pengembalian dana 100% <b><u><i>S&K Berlaku</i></u></b></div>
+                <div class="img5"></div>
+            </div>
+            <div class="list-card-area">
+                <div onclick="card1()" class="list-card1"></div>
+                <div onclick="card2()" class="list-card2"></div>
+                <div onclick="card3()" class="list-card3"></div>
+                <div onclick="card4()" class="list-card4"></div>
+                <div onclick="card5()" class="list-card5"></div>
+            </div>
+            <div class="txt-ket-area">
+                <div1>Video Game</div1>
+                <div2>Pembuatan Web</div2>
+                <div3>Bimbel</div3>
+                <div4>Creative Design</div4>
+                <div5>Refund</div5>
+            </div>
+        </div>
+    </section>
+    <section id="tentang">
+        <div class="bg-set">
+            <div class="txt1">Terbaik Disegala Macam Aspek Pelayanan!</div>
+            <div class="txt-abt">
+                <h3 style="font-family: monospace;">Tentang AVE Store</h3>
+                <div class="line-title-abt"></div>
+                <u>AVE Store</u> adalah store penyedia berbagai layanan digital<br>
+                Dengan memprioritaskan kenyamanan pelanggan dan memberikan kepercayaan <b>100%</b> ke semua kalangan pelanggan<br>
+                Kami menjamin semua layanan dan produk kami memiliki harga yang paling rendah dengan kualitas <b>Terbaik</b><br>
+                Berbagai layanan dan produk yang kami sediakan memiliki <b>syarat & ketentuan</b> masing-masing,<br>
+                dari metode pembayaran, refund, dan dari berbagai aspek lainnya seperti customer service ada <b>syarat & kententuan</b> tersendiri<br>
+                Kami juga menjamin pelayanan pelanggan <b>fast reponse</b> untuk contact Whatsapp<br>
+                Kita juga akan meresponse chat semua pelanggan langsung dari kami tanpa ada chat bot satupun<br>
+                Dan kami tidak memprioritaskan atau mengutamakan pelanggan dengan alasan terkait biaya<br>
+                Semua pelanggan akan kami layani dengan <b>adil</b> dan tanpa ada alasan perlakuan khusus<br>
+                Semua update informasi seputar <u>AVE Store</u> hanya ada di website ini.<br>
+                Dan informasi selain dari website ini adalah palsu, jadi jika ingin mengetahui update informasi seputar <u>AVE Store</u><br>
+                anda bisa menggunakan layanan <b>Information Update</b> untuk memberikan pemberitahuan update informasi kepada anda secara langsung via medsos<br>
+                layanan <b>Information Update</b> ini <b>Gratis</b> tanpa biaya sedikitpun.
+            </div>
+            <div class="note">Note: Semua informasi dari luar website ini adalah palsu!</div>
+        </div>
+    </section>
+    <section id="layanan">
+        <div class="bg-set layanan-area">
+            <div class="card yl" id="set1">
+                <div class="txt-ly" id="txt-ly1">
+                    Top-up Video Game<br>
+                    klik untuk informasi selengkapnya:
+                </div>
+                <button id="bsatu" onclick="isatu()" class="info yl hy">More...</button>
+            </div>
+            <div class="card aq" id="set2">
+                <div class="txt-ly" id="txt-ly2">
+                    Top-up E-Wallet<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="idua()" class="info aq ha" id="bdua">More...</button>
+            </div>
+            <div class="card yl" id="set3">
+                <div class="txt-ly" id="txt-ly3">
+                    Isi Ulang Pulsa<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="itiga()" class="info yl hy" id="btiga">More...</button>
+            </div>
+            <div class="card aq" id="set4">
+                <div class="txt-ly" id="txt-ly4">
+                    Beli Kouta Internet<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="iempat()" class="info aq ha" id="bempat">More...</button>
+            </div>
+            <div class="card yl" id="set5">
+                <div class="txt-ly" id="txt-ly5">
+                    Cteative Design<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="ilima()" class="info yl hy" id="blima">More...</button>
+            </div>
+            <div class="card aq" id="set6">
+                <div class="txt-ly" id="txt-ly6">
+                    Pembuatan Website<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="ienam()" class="info aq ha" id="benam">More...</button>
+            </div>
+            <div class="card yl" id="set7">
+                <div class="txt-ly" id="txt-ly7">
+                    Bimbel Web Design<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="ituju()" class="info yl hy" id="btuju">More...</button>
+            </div>
+            <div class="card aq" id="set8">
+                <div class="txt-ly" id="txt-ly8">
+                    Bimbel Bahasa Pemrogramman Dasar<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="ilapan()" class="info aq ha" id="blapan">More...</button>
+            </div>
+            <div class="card yl" id="set9">
+                <div class="txt-ly" id="txt-ly9">
+                    Custom Request<br>
+                    Klik untuk informasi selengkapnya:
+                </div>
+                <button onclick="isembilan()" class="info yl hy" id="bsembilan">More...</button>
+            </div>
+        </div>
+    </section>
+    <section id="promo">
+        <div class="bg-set">
+            <div class="nav-promo">
+                <div onclick="cpw()">Pembuatan website</div>
+                <div onclick="cbb()">Bimbel</div>
+                <div onclick="ccd()">Creative Design</div>
+            </div>
+            <div class="pr-pw ft" id="pw">
+                <p class="title">AVE Design</p>
+                <p class="txt1">Pertama kali membuat website disini <b>Gratis Revisi Satu Bulan Pertama</b></p>
+                <p class="txt2">Mulai Dari 20K/bulan bisa update web 2 kali</p>
+                <p class="txt3">beli website dengan bayar satu kali seumur hidup mulai dari 100K</p>
+                <div class="img-wd"></div>
+            </div>
+            <div class="bb-pr" id="bb">
+                <p class="title">AVE Course</p>
+                <p class="txt1">Belajar bersama lebih hemat!</p>
+                <p class="txt2">Generasi emas bersama <b>AVEC</b></p>
+                <ul type="disc">
+                    <li>1 orang = 5K/jam</li><br>
+                    <li>2 orang = 8K/jam</li><br>
+                    <li>3 orang = 10K/jam</li><br>
+                    <li>4 orang = 12K/jam</li><br>
+                    <li>5 orang = 13K/jam</li><br>
+                    <li>dan seterusnya <b>-50%</b></li>
+                </ul>
+                <p class="txt3">Belajar gratis materi dasar dengan S&K yang Berlaku</p>
+                <div class="img-bb"></div>
+            </div>
+            <div class="cd-pr ft" id="cd">
+                <p class="title">AVE Design</p>
+                <p class="txt1">Design mahal, harga teman</p>
+                <p class="txt2">mulai dari 5K saja<br>ciptakan design mu jadi lebih keren</p>
+                <p class="txt3">gratis Revisi 2 kali untuk minimal 20K</p>
+                <div class="img-cd"></div>
+            </div>
+        </div>
+    </section>
+    <section id="order">
+        <div class="bg-set">
+            <div class="txt-mid-odr">Order Lebih Mudah Disini</div>
+            <div class="border-qr">
+                <div class="qr"></div>
+                <div class="scan-me">Scan Me!</div>
+            </div>
+            <div onclick="order()" class="btn-sc">Order Now</div>
+            <iframe id="wf" class="wf" src="https://whatsform.com/vnu2n5"></iframe>
+            <div id="clo" onclick="ttp()" class="close"></div>
+        </div>
+    </section>
+    <section id="kontak">
+        <div class="bg-set flex-kontak">
+            <div class="explain-kontak">Semua Kontak & Media Sosial Resmi Kami Hanya Dari Website Ini</div>
+            <div onclick="wa()" class="kontak wa">Whatsapp</div>
+            <div onclick="ig()" class="kontak ig">Instagram</div>
+            <div onclick="em()" class="kontak em">Email</div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
