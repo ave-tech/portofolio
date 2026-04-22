@@ -1,70 +1,434 @@
-@keyframes fade-down {
-    from {opacity: 0; transform: translateY(-10px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-@keyframes menu-line {
-    from {opacity: 0; transform: translateX(10px);}
-    to {opacity: 1; transform: translateX(0);}
-}
-
 .glass-white {background: rgba(255, 255, 255, 0.25);}
 .glass-black {background: rgba(0, 0, 0, 0.25);}
+body {background-color: #1e1e1e;}
+.mmenu {
+        display: block; position: fixed; top: 80px; right: 20px;padding: 10px; z-index: 50; cursor: pointer;
+        border-radius: 20px; font-size: 20px; font-family: Monospace; color: white; backdrop-filter: blur(5px); border: 1px solid white;
+    }
+.bg-set {
+    background-color: black; color: white;
+    position: relative; top: 10%; left: 5%; width: 90%; height: 80%;
+    border-radius: 20px; padding: 20px;
+}
+.txt1 {position: relative; color: gray;}
 
-body {
-    transition: all 1s;
+.title {
+    position: fixed; width: 200px; height: 50px; top: 10px; right: 20px;
+    display: flex; justify-content: space-around; align-items: center;
+    border-radius: 20px; border: 2px solid gray; z-index: 100; backdrop-filter: blur(5px);
+}
+.ave {
+    background-image: url("AVE.png"); background-size: cover;
+    width: 35px; height: 35px; border-radius: 50%;
+}
+.txt-ave {
+    width: 60%; height: 30%; cursor: pointer; transition: all 0.5s;
+    border-radius: 20px; font-family: monospace; color: white; padding: 10px; text-align: center;
+}
+.txt-ave:hover {scale: 1.1;}
+.menu{display: none}
+.mn {
+    position: fixed; top: 135px; right: 20px; width: 150px; height: 200px; border-radius: 20px; border: 1px solid white;
+    display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;
+    z-index: 50; backdrop-filter: blur(10px);
+}
+.ttup {
+    position: absolute; top: 5px; right: 5px; width: 20px; height: 20px;
+    background-color: red; border-radius: 50%; cursor: pointer;
+}
+.cmenu {
+    color: white; font-family: Monospace; cursor: pointer; text-decoration: none; font-size: 10px;
+}
+.nav-global {
+    position: fixed; left: 20px; top: 10px; width: 600px; height: 30px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 100; backdrop-filter: blur(5px);
+}
+.nav-global a {color: white; font-family: monospace; text-decoration: none; font-size: 15px;}
+section {height: 700px;}
+.list-card-area {
+    display: flex; justify-content: space-evenly; align-items: center;
+    position: absolute; width: 90%; bottom: 30px; left: 5%;
+}
+.list-card1 {
+    background-image: url("Vgame.png"); background-size: contain; background-repeat: no-repeat; background-color: aqua; background-position-x: 50%; background-position-y: 0px;
+    width: 150px; height: 100px; border-radius: 20px; cursor: pointer;
+}
+.list-card2 {
+    background-image: url("web.png"); background-size: contain; background-repeat: no-repeat; background-position-y: 0px; background-position-x: 50%; background-color: rgb(155, 155, 255);
+    width: 150px; height: 100px; border-radius: 20px; cursor: pointer;
+}
+.list-card3 {
+    background-image: url("course.png"); background-size: contain; background-repeat: no-repeat; background-position-y: 0px; background-position-x: 50%; background-color: rgb(88, 88, 255);
+    width: 150px; height: 100px; border-radius: 20px; cursor: pointer;
+}
+.list-card4 {
+    background-image: url("drawing.png"); background-size: contain; background-color: rgb(137, 137, 223); background-position-y: 0px; background-position-x: 50%; background-repeat: no-repeat;
+    width: 150px; height: 100px; border-radius: 20px; cursor: pointer;
+}
+.list-card5 {
+    background-image: url("refund.png"); background-color: rgb(51, 51, 155); background-size: contain; background-repeat: no-repeat; background-position-y: 0px; background-position-x: 50%;
+    width: 150px; height: 100px; border-radius: 20px; cursor: pointer;
+}
+.txt-ket-area {
+    position: absolute; bottom: 10px; left: 3%; width: 90%;
+    display: flex; justify-content: space-around;
+}
+.txt-ket-area div {width: 200px;}
+#item1 {
+    display: block; position: relative; left: 20px; top: 100px;
+    color: white; font-size: 50px; font-family: monospace;
+}
+.txt-off1 {position: relative; top: 20px; color: lightblue; font-size: 25px;}
+.txt-off1 b{color: yellow;}
+.img1 {
+    background-image: url("Vgame.png"); background-size: cover;
+    position: absolute; right: 100px; top: -100px; width: 300px; height: 300px; border-radius: 50%;
 }
 
-.txt-portofolio {
-    color: green;
-    font-family: sans-serif;
-    position: absolute;
-    top: 20px;
+#item2 {
+    display: none; position: relative; left: 20px; top: 100px;
+    color: white; font-size: 50px; font-family: monospace;
+}
+.txt-off2 {position: relative; top: 20px; color: lightblue; font-size: 25px;}
+.txt-off2 b{color: yellow;}
+.img2 {
+    background-image: url("web.png"); background-size: contain;
+    position: absolute; right: 100px; top: -100px; width: 300px; height: 300px; border-radius: 50%;
+}
+#item3 {
+    display: none;
+    position: relative;
     left: 20px;
-    font-size: 20px;
-    transition: all 1s;
-    transition-delay: 1.2s;
-    opacity: 0;
-    animation: fade-down 1s ease forwards;
+    top: 100px;
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
 }
-.waktu {
-    color: black;
-    text-align: center;
-    font-style: oblique;
-    font-size: 20px;
+.txt-off3 {
     position: relative;
     top: 20px;
-    transition: all 1s;
-    transition-delay: 1.3s;
-    opacity: 0;
-    animation: fade-down 1s ease 0.5s forwards;
+    color: lightblue;
+    font-size: 25px;
 }
-.menu-btn {
-    width: 30px;
-    height: 25px;
+.txt-off3 b{color: yellow;}
+.img3 {
+    background-image: url("course.png");
+    background-size: contain;
     position: absolute;
+    right: 100px;
+    top: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+#item4 {
+    display: none;
+    position: relative;
+    left: 20px;
+    top: 100px;
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
+}
+.txt-off4 {
+    position: relative;
     top: 20px;
-    text-align: right;
-    right: 20px;
-    cursor: pointer;
+    color: lightblue;
+    font-size: 25px;
+}
+.txt-off4 b{color: yellow;}
+.img4 {
+    background-image: url("drawing.png");
+    background-size: contain;
+    position: absolute;
+    right: 100px;
+    top: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+#item5 {
+    display: none;
+    position: relative;
+    left: 20px;
+    top: 100px;
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
+}
+.txt-off5 {
+    position: relative;
+    top: 20px;
+    color: lightblue;
+    font-size: 25px;
+}
+.txt-off5 b{color: yellow;}
+.img5 {
+    background-image: url("refund.png");
+    background-size: contain;
+    position: absolute;
+    right: 100px;
+    top: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.line-title-abt {position: relative; width: 200px; border: 1px solid white; top: -15px;}
+.txt-abt {padding-top: 100px; z-index: 2;}
+.txt-abt b {color: yellow; font-family: monospace;}
+.txt-abt u {color: aqua}
+.note {position: absolute; bottom: 10px; color: gray; font-family: monospace;}
+
+.layanan-area {
+    display: flex; overflow-x: auto;
+    align-items: center;
+}
+.card {
+    width: 35%; height: 400px; border-radius: 20px;
+    background-color: #1e1e1e; margin: 20px; flex-shrink: 0;
+    align-content: center; text-align: center; font-family: Monospace;
+    align-items: center;
+}
+.info {
+    position: relative; width: 80%; padding-top: 10px; padding-bottom: 10px; top: 100px;
+    border-radius: 20px; background: none; border: none;
+    font-family: Monospace; cursor: pointer; transition: all 0.5s ease;
+}
+.yl {box-shadow: 0 0 10px 2px yellow; color: yellow; }
+.aq {box-shadow: 0 0 10px 2px aqua; color: aqua; }
+.hy:hover {box-shadow: none; background-color: yellow; color: black;}
+.ha:hover {box-shadow: none; background-color: aqua; color: black;}
+.card {transition: all 1s ease;}
+
+.nav-promo {
+    position: absolute;
     display: flex;
+    width: 500px;
+    height: 30px;
     justify-content: space-between;
-    align-content: center;
-    flex-direction: column;
+    align-items: center;
+    left: 20px;
+    top: 10px;
+    z-index: 100;
 }
-.menu-line {
-    width: 80%;
-    height: 5px;
-    background-color: black;
-    transition: all 1s;
-    transition-delay: 1.5s;
-    opacity: 0;
+.nav-promo div {
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
 }
-.ml1 {animation: menu-line 0.5s ease forwards;}
-.ml2 {animation: fade-down 0.5s ease 0.5s forwards;}
-.ml3 {animation: fade-down 0.5s ease 1s forwards;}
-.theme-mode-btn {
-    display: block;
-    width: 30px;
+.pr-pw {display: block;}
+.pr-pw .txt1 {
+    position: absolute; top: 200px; width: 400px;
+    color: yellow; font-family: monospace; font-size: 20px;
+}
+.pr-pw .txt1 b {color: aqua;}
+.pr-pw .txt2 {
+    position: absolute; top: 100px; width: 300px; right: 20px;
+    color: rgb(49, 255, 221); font-family: monospace; font-size: 20px;
+}
+.pr-pw .txt3 {
+    position: absolute; bottom: 10px; right: 200px;
+    color: rgb(116, 130, 255); font-family: monospace; font-size: 15px;
+}
+.img-wd {
+    position: absolute; top: 100px; width: 400px; height: 400px; left: 450px;
+    background-image: url("pw.png"); background-size: cover;
+}
+
+.bb-pr {display: none;}
+.bb-pr .title {
+    position: absolute; top: -20px; right: -10px;
+    font-family: cursive; font-size: 20px; color: rgb(0, 255, 0);
+    border: none; backdrop-filter: none;
+}
+.bb-pr .txt1 {
+    position: absolute; top: 200px; width: 400px;
+    color: yellow; font-family: monospace; font-size: 25px;
+}
+.bb-pr .txt2 {
+    position: absolute; bottom: 10px; width: 400px;
+    color: gray; font-family: monospace; font-size: 15px;
+}
+.bb-pr .txt2 b {color: yellow;}
+.bb-pr ul {
+    position: absolute; top: 100px; width: 300px; right: 20px;
+    color: rgb(49, 255, 221); font-family: monospace; font-size: 20px;
+}
+.bb-pr .txt3 {
+    position: absolute; bottom: 10px; right: 200px;
+    color: rgb(116, 130, 255); font-family: monospace; font-size: 15px;
+}
+.img-bb {
+    position: absolute; top: 100px; width: 400px; height: 400px; left: 450px;
+    background-image: url("wd.png"); background-size: cover;
+}
+.cd-pr {display: none;}
+.ft .title {
+    position: absolute; top: -20px; right: -10px;
+    font-family: cursive; font-size: 20px; color: rgb(0, 255, 0);
+    border: none; backdrop-filter: none;
+}
+.cd-pr .txt1 {
+    position: absolute; top: 200px; width: 400px;
+    color: yellow; font-family: monospace; font-size: 25px;
+}
+.cd-pr .txt2 {
+    position: absolute; top: 100px; right: 20px;
+    color: aquamarine; font-family: monospace; font-size: 20px;
+}
+.cd-pr .txt3 {
+    position: absolute; bottom: 10px; right: 200px;
+    color: rgb(116, 130, 255); font-family: monospace; font-size: 15px;
+}
+.img-cd {
+    position: absolute; top: 100px; width: 400px; height: 400px; left: 450px;
+    background-image: url("cd.png"); background-size: cover;
+}
+
+.txt-mid-odr {
+    position: relative; padding-top: 80px;
+    text-align: center; font-size: 40px; font-family: monospace; color: yellow;
+}
+.border-qr {
+    position: relative; left: 438px;
+    width: 300px; height: 300px; background-color: #1e1e1e;
+    text-align: center; padding-top: 2%; border-radius: 20px;
+    transition: all 0.5s;
+}
+.border-qr:hover { z-index: 1; background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px); border-radius: 20px 0 20px 0; scale: 1.1;}
+.qr {
+    width: 80%; height: 80%; padding-left: 10%;
+    background-image: url("qr-order.png"); background-size: contain; background-repeat: no-repeat; background-position-x: right;
+}
+.scan-me {
+    position: relative; padding-top: 10px;
+    font-size: 25px; font-family: monospace;
+}
+.btn-sc {
+    position: relative; width: 100px; height: 20px; left: 45%; top: 10px;
+    border-radius: 20px; border: 1px solid white;
+    text-align: center; font-family: monospace; padding-top: 5px;
+    cursor: pointer; transition: all 0.5s;
+}
+.btn-sc:hover {scale: 1.2; background-color: blue;}
+.wf {
+    position: absolute; top: 20px; border: none; border-radius: 20px;
+    width: 600px; height: 560px; left: 300px; display: none;
+}
+.close {
+    position: absolute; top: 60px; right: 380px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background-color: red; z-index: 1; cursor: pointer; display: none;
+}
+
+.snk-flex-menu {
+    display: flex; position: absolute; top: 10px; left: 20px;
+}
+.snk-flex-child {
+    display: flex; position: absolute; top: 120px; left: 20px; flex-direction: column;
+}
+.snk-main-menu {
+    position: relative; width: 100px; height: 70px;
+    border: 2px solid white; text-align: center; font-size: 30px;
+    padding-top: 35px; cursor: pointer;
+}
+.parent {width: 152.5px;}
+.snk-child {
+    position: relative; width: 100px; height: 112px;
+    border: 2px solid white; text-align: center; font-size: 30px;
+    padding-top: 35px; cursor: pointer;
+}
+.flex-kontak {display: flex; justify-content: space-evenly; align-items: center;}
+.kontak {
+    width: 200px; height: 50px;
+    text-align: center; font-size: 30px; padding-top: 10px;
+    border: 1px solid white; border-radius: 20px; transition: all 0.5s; cursor: pointer;
+}
+.wa:hover {scale: 1.2; background-color: rgb(31, 233, 31); color: black;}
+.ig:hover {scale: 1.2; background-color: lightcoral; color: black;}
+.em:hover {scale: 1.2; background-color: yellow; color: black;}
+.explain-kontak {position: absolute; top: 10px; left: 20px; font-family: monospace; color: white;}
+@media (min-width: 980px) and (max-width: 1365px) { /*PHONE DEKSTOP*/
+    #item1 {font-size: 30px;}
+    #item2 {font-size: 30px;}
+    #item3 {font-size: 30px;}
+    #item4 {font-size: 30px;}
+    #item5 {font-size: 30px;}
+    .txt-off1 {font-size: 15px; width: 40%}
+    .txt-off2 {font-size: 15px; width: 40%}
+    .txt-off3 {font-size: 15px; width: 40%}
+    .txt-off4 {font-size: 15px; width: 40%}
+    .txt-off5 {font-size: 15px; width: 40%}
+    .img1 {right: 20px;}
+    .img2 {right: 20px;}
+    .img3 {right: 20px;}
+    .img4 {right: 20px;}
+    .img5 {right: 20px;}
+    .img-wd {top: 170px; width: 380px; height: 380px;}
+    .img-bb {top: 250px; width: 300px; height: 300px; left: 270px;}
+    .bb-pr .txt3 {right: 50px;}
+    .img-cd {top: 180px; width: 370px; height: 370px;}
+    .border-qr {left: 290px;}
+    .wf {left: 150px;}
+    .close {right: 180px; }
+    .snk-main-menu {font-size: 15px;}
+    .parent {width: 105px;}
+    .snk-child {font-size: 15px;}
+}
+/*-------------Mobile---------------*/
+@media (max-width: 575px) {
+    .mmenu {font-size: 15px; top: 50px}
+    .mn {top: 100px;}
+    .bg-set {padding: 10px; width: 84%}
+    .nav-global {width: 85%;}
+    .nav-global a {font-size: 10px;}
+    .title {display: none;}
+    .img1 {position: relative; width: 250px; height: 250px; right: 0px; top: 50px; border-radius: 0px;}
+    .img2 {position: relative; width: 250px; height: 250px; right: 0px; top: 50px; border-radius: 0px;}
+    .img3 {position: relative; width: 250px; height: 250px; right: 0px; top: 50px; border-radius: 0px;}
+    .img4 {position: relative; width: 250px; height: 250px; right: 0px; top: 50px; border-radius: 0px;}
+    .img5 {position: relative; width: 250px; height: 250px; right: 0px; top: 50px; border-radius: 0px;}
+    #item1 {font-size: 18px;}
+    #item2 {font-size: 18px;}
+    #item3 {font-size: 14px;}
+    #item4 {font-size: 16px;}
+    #item5 {font-size: 18px;}
+    .txt-off1 {font-size: 8px;}
+    .txt-off2 {font-size: 8px;}
+    .txt-off3 {font-size: 8px;}
+    .txt-off4 {font-size: 8px;}
+    .txt-off5 {font-size: 8PX;}
+    .list-card1 {background-image: none; background-color: blueviolet; border-radius: 50%; width: 40px; height: 40px;}
+    .list-card2 {background-image: none; background-color: aqua; border-radius: 50%; width: 40px; height: 40px;}
+    .list-card3 {background-image: none; background-color: skyblue; border-radius: 50%; width: 40px; height: 40px;}
+    .list-card4 {background-image: none; background-color: lightcoral; border-radius: 50%; width: 40px; height: 40px;}
+    .list-card5 {background-image: none; background-color: yellow; border-radius: 50%; width: 40px; height: 40px;}
+    .txt-ket-area {display: none;}
+    .txt-abt {font-size: 10px; padding-top: 40px;}
+    .img-wd {width: 250px; height: 250px; left: 0px; top: 260px;}
+    .img-bb {width: 250px; height: 250px; left: 0px; top: 260px;}
+    .img-cd {width: 250px; height: 250px; left: 0px; top: 260px;}
+    .nav-promo {width: 84%;}
+    .nav-promo div {font-size: 8px;}
+    .pr-pw .txt1 {font-size: 10px; width: 250px;}
+    .pr-pw .txt2 {font-size: 15px; width: 200px;}
+    .pr-pw .txt3 {font-size: 10px; width: 300px; right: 0px;}
+    .bb-pr .txt1 {font-size: 10px; width: 200px; top: 70px;}
+    .bb-pr .txt2 {font-size: 10px; width: 200px;}
+    .bb-pr .txt3 {font-size: 10px; width: 200px; right: 0px; bottom: 30px;}
+    .bb-pr ul {font-size: 10px; right: 0px; width: 140px;}
+    .cd-pr .txt1 {font-size: 10px; width: 200px; border:}
+    .cd-pr .txt2 {font-size: 10px; width: 230px; border:}
+    .cd-pr .txt3 {font-size: 10px; width: 250px; right: 20px;}
+    .txt-mid-odr {font-size: 15px;}
+    .border-qr {left: 45px; width: 200px; height: 200px;}
+    .btn-sc {left: 95px;}
+    .kontak {width: 80px; height: 20px; font-size: 10px;}
+}
     height: 30px;
     background-color: black;
     position: absolute;
