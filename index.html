@@ -706,3 +706,675 @@
     <script src="general.js"></script>
 </body>
 </html>
+        box-shadow: 0 0 5px 1px black;
+        border-radius: 20px;
+        width: 100px; height: 30px;
+        font-size: 20px; margin-top: 10px; cursor: pointer;
+        transition: all 1s; transition-delay: 0.5s;
+    }
+    .masuk:hover {scale: 1.2; box-shadow: 2px 5px 10px 1px;}
+    
+    .header {
+        display: none; justify-content: space-between;
+        width: 75%; height: 30px; align-items: center;
+        border-radius: 20px; box-shadow: 2px 5px 10px 1px;
+        animation: fadeDown 0.5s ease forwards 0.5s;
+        opacity: 0; padding: 10px; transition: all 1s;
+        position: fixed; z-index: 100; backdrop-filter: blur(5px);
+    }
+    .txt-porto {
+        font-family: Monospace; font-size: 15px;
+        color: green; animation: fadeDown 1s ease forwards 0.5s;
+        opacity: 0; transition: all 1s;
+    }
+    .theme {
+        width: 25px; height: 25px; border-radius: 50%;
+        border-bottom: 3px solid yellow;
+        border-left: 3px solid yellow;
+        background-color: black; opacity: 0;
+        animation: fadeDown 1s ease forwards 1s;
+        transition: all 1s; cursor: pointer;
+    }
+    .menu {
+        display: none; position: fixed;
+        top: 20px; width: 30px; height: 30px;
+        flex-direction: column; justify-content: space-between;
+        right: 15px; z-index: 100; cursor: pointer;
+    }
+    .lineMenu {
+        width: 100%; height: 5px;
+        background-color: black; opacity: 0;
+    }
+    .lm1 {animation: fadeDown 1s ease forwards 1s;}
+    .lm2 {animation: fadeDown 1s ease forwards 1.2s;}
+    .lm3 {animation: fadeDown 1s ease forwards 1.5s;}
+    
+    .isi-mn {
+        display: none; flex-direction: column;
+        width: 170px; border-radius: 20px 0 20px 20px;
+        background: rgba(255, 255, 255, 0.25);
+        position: fixed; top: 60px; right: 15px;
+        backdrop-filter: blur(5px); z-index: 100;
+        padding: 10px; border: 1px solid gray;
+        animation: fade 1s ease;
+        opacity: 0; transition: all 1s;
+    }
+    .list {
+        font-size: 15px; font-family: Monospace;
+        margin-top: 10px; border-bottom: 1px solid gray;
+        animation: slideLeft 1s ease forwards;
+        opacity: 0; transition: all 1s; cursor: pointer;
+        color: black; text-decoration: none;
+    }
+    .l1 {animation-delay: 0.5s;}
+    .l2 {animation-delay: 0.8s;}
+    .l3 {animation-delay: 1.1s;}
+    .l4 {animation-delay: 1.4s;}
+    
+    .waktu {
+        font-size: 50px; font-family: Monospace;
+        text-align: center; transition: all 1s;
+        animation: fadeDown 1s ease forwards 0.5s;
+        display: none; opacity: 0; padding-top: 80px;
+    }
+    .txt-contact {
+        text-align: center;
+        transition: all 1s; animation: fadeDown 1s ease forwards 1s;
+        display: none; opacity: 0;
+    }
+    .contact {
+        display: none; opacity: 0; position: relative;
+        animation: fade 1s ease forwards 1.5s;
+        justify-content: space-evenly;
+        width: 70%; padding: 5px;
+        border-radius: 20px; backdrop-filter: blur(5px);
+        border: 1px solid gray;
+        left: 13.5%;
+    }
+    .item {
+        width: 50px; height: 50px;
+        border-radius: 20px; opacity: 0;
+        animation: slideLeft 1s ease forwards;
+        transition: all 0.5s; cursor: pointer;
+    }
+    .item:hover {scale: 1.2;}
+    .wa {
+        animation-delay: 2s;
+        background-size: cover;
+        background-image: url('wa.png');
+        width: 30px; height: 30px;
+    }
+    .em {
+        animation-delay: 2.5s;
+        background-size: cover;
+        background-image: url('email.png');
+        width: 30px; height: 30px;
+    }
+    .ig {
+        animation-delay: 3s;
+        background-image: url('ig.png');
+        background-size: cover;
+        width: 30px; height: 30px;
+    }
+    .notif {
+        width: 100%; height: 300px;
+        display: none; overflow-y: auto;
+        align-items: center; flex-direction: column;
+        top: 30px; position: relative;
+    }
+    .inotif {
+        width: 80%; height: 80px;
+        border-radius: 20px;
+        animation: fadeDown 1s ease forwards;
+        flex-shrink: 0; 
+        backdrop-filter: blur(5px);
+        opacity: 0; 
+        margin: 10px;
+        box-shadow: 2px 5px 10px 1px #1e1e1e;
+        display: flex; 
+        justify-content: space-between;
+        align-items: center; 
+        padding: 0 10px;
+        background: linear-gradient(to right, skyblue 50%, rgba(255, 255, 255, 0.25) 50%);
+        background-size: 200% 100%;
+        background-position: right; /*pilih warna paling kanan*/
+        transition: all 1s ease;
+    }
+    
+    .inotif:hover {
+        scale: 1.1;
+        background-position: left;
+    }
+    .txt-notif {
+        width: 60%;
+    }
+    .txt-notif b {
+        color: black; font-size: 15px;
+    }
+    .txt-notif i {
+        color: gray; font-size: 10px;
+    }
+    .go {
+        border-radius: 50%; font-size: 20px; width: 30px; height: 30px;
+        background: rgba(255, 255, 255, 0.25); text-align: center;
+        align-content: center; color: black; text-decoration: none; cursor: pointer;
+        font-family: Sans-Serif;
+    }
+    .iconAbt {
+        background-image: url('info.png');
+        background-position: center;
+        background-size: cover; width: 30px; height: 30px;
+        border-radius: 50%;
+    }
+    .iconSc {
+        background-image: url('code.png');
+        background-position: center;
+        background-size: cover; width: 30px; height: 30px;
+        border-radius: 50%;
+    }
+    .iconProject {
+        background-image: url('project.png');
+        background-position: center;
+        background-size: cover; width: 30px; height: 30px;
+        border-radius: 50%;
+    }
+    .iconCheck {
+        background-image: url('check.png');
+        background-position: center;
+        background-size: cover; width: 30px; height: 30px;
+        border-radius: 50%;
+    }
+    .iconFun {
+        background-image: url('celebrate.png');
+        background-position: center;
+        background-size: cover; width: 30px; height: 30px;
+        border-radius: 50%;
+    }
+    .iconEvent {
+        background-image: url('event.png');
+        background-position: center;
+        background-size: cover; width: 30px; height: 30px;
+        border-radius: 50%;
+    }
+    .about {
+        animation-delay: 2s;
+    }
+    .Fproject {
+        animation-delay: 2.5s;
+    }
+    .project {
+        animation-delay: 3s;
+    }
+    .fun {
+        animation-delay: 3.5s;
+    }
+    #about {position: relative; top: 150px;}
+    
+    section {height: 700px; display: none;}
+    
+    .flexH {
+        display: none; justify-content: space-evenly;
+        align-items: center;
+    }
+    .char2 {
+        background-image: url('char2.jpg');
+        background-size: cover; border-radius: 50%;
+        width: 100px; height: 100px; opacity: 0;
+        animation: fade 0.5s ease forwards;
+    }
+    .nama {
+        font-size: 30px; color: black; opacity: 0;
+        animation: fadeDown 1s ease forwards 0.5s;
+        transition: all 1s;
+    }
+    .nama b {
+        font-size: 50px; color: white; opacity: 0;
+        animation: fadeDown 1s ease forwards 1s;
+        text-shadow: 3px 1px black;
+    }
+    .nama sup {
+        font-size: 15px; color: white;
+    }
+    .cake {
+        background-image: url('light_cake.png');
+        width: 200px; height: 150px;
+        background-size: contain; opacity: 0;
+        animation: slideLeft 1s ease forwards 1s;
+        background-repeat: no-repeat;
+    }
+    .char3 {
+         background-image: url('char3.jpg');
+        background-size: cover; border-radius: 50%;
+        width: 100px; height: 100px; opacity: 0;
+        animation: fade 0.5s ease forwards;
+    }
+    .awd {
+        width: 180px;
+        color: black; transition: all 1s;
+    }
+    .awd b {
+        color: white; font-size: 40px;
+        text-shadow: 3px 1px black;
+    }
+    .awd i {
+        color: yellow; font-size: 35px;
+        text-shadow: 1px 1px black;
+    }
+    .awd sup {
+        font-size: 10px;
+    }
+    
+    #sc {
+        top: 150px; position: relative;
+    }
+    .fp {
+        border: none; 
+        border-radius: 50px 0 50px 0;
+        backdrop-filter: blur(5px);
+        width: 80%; 
+        height: 350px; 
+        opacity: 0;
+        animation: fade 0.5s ease forwards;
+        
+        /* LOGIKA SLIDE DIAGONAL */
+        /* 1. Gunakan sudut 45deg untuk arah bottom-left ke top-right */
+        background: linear-gradient(45deg, skyblue 50%, rgba(135, 206, 235, 0.25) 50%);
+        
+        /* 2. Perbesar ukuran ke 300% agar transisi diagonal tertutup sempurna */
+        background-size: 300% 300%;
+        background-position: 100% 0%;
+        
+        transition: all 1s ease;
+        overflow: hidden; /* Penting agar warna tidak 'bocor' dari radius */
+    }
+    
+    .fp:hover {
+        background-position: 0% 100%;
+        scale: 1.1;
+    }
+
+    .fp legend {
+        font-family: Monospace; text-align: right;
+        background: rgba(135, 206, 235, 0.25);
+        border-radius: 20px;
+        padding: 5px;
+    }
+    .img-Fas {
+        background-image: url("charStore.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%; height: 60%;
+        position: relative; top: 10%; left: 10%;
+    }
+    .codeBuble {
+        border: 1px solid gray;
+        font-family: Monospace;
+        font-size: 10px; padding: 5px;
+        background: none; border-radius: 2.2px;
+        transition: all 0.5s;
+    }
+    .codeBuble:hover {
+        scale: 1.1;
+        background-position: left;
+    }
+    .htm {
+        background: linear-gradient(to right, orange 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        overflow: hidden;
+    }
+    .c2s {
+        background: linear-gradient(to right, blue 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        overflow: hidden;
+    }
+    .jvs {
+        background: linear-gradient(to right, #ffff00 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        overflow: hidden;
+    }
+    
+    /* Update pada selector .progressBar */
+    .progressBar {
+        width: 250px; 
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid gray; /* Border ini akan diam di tempat */
+        margin-right: 10px;
+        /* LOGIKA: */
+        /* Kita buat background yang lebarnya 2x lipat (200%) */
+        /* Setengah kiri adalah hijau (86% dari total), setengah kanan kosong */
+        background: linear-gradient(to right, lightgreen 43%, rgba(0,0,0,0.1) 43%);
+        /* Ukuran background dibuat lebar agar bisa digeser */
+        background-size: 200% 100%;
+        /* Mulai dari posisi 100% (bagian yang kosong/transparan) */
+        background-position: 100% 0%;
+        /* Jalankan animasi */
+        animation: fillProgress 1.5s ease forwards;
+    }
+    .progressBar1 {
+        width: 250px; 
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid gray; /* Border ini akan diam di tempat */
+        margin-right: 10px;
+        /* LOGIKA: */
+        /* Kita buat background yang lebarnya 2x lipat (200%) */
+        /* Setengah kiri adalah hijau (86% dari total), setengah kanan kosong */
+        background: linear-gradient(to right, skyblue 45%, rgba(0,0,0,0.1) 45%);
+        /* Ukuran background dibuat lebar agar bisa digeser */
+        background-size: 200% 100%;
+        /* Mulai dari posisi 100% (bagian yang kosong/transparan) */
+        background-position: 100% 0%;
+        /* Jalankan animasi */
+        animation: fillProgress 1.5s ease forwards;
+    }
+
+    .sideLeft {
+        justify-content: left;
+    }
+    
+    .fsproject {
+        border: 1px solid gray;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+    .fsproject:hover {
+      scale: 105%;
+    }
+    .ketNeed {
+        border-radius: 20px;
+        text-align: center; align-content: center;
+        border: 1px solid gray;
+        padding: 5px;
+        transition: 0.5s all;
+    }
+    .ketNeed:hover {
+        background-color: black;
+        color: white;
+    }
+    .line {
+        border: 0.5px solid gray;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    table {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 7px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(5px);
+    }
+    td {
+        border: 1px solid black;
+    }
+    .gameImg {
+        width: 250px; height: 150px;
+        border: 1px solid black;
+        margin-left: 5px;
+        background-image: url('game_skyblue.jpg');
+        background-size: cover;
+        border-radius: 50%;
+        background-position-x: -6px;
+    }
+    .MovieImg {
+        width: 400px; height: 150px;
+        border: 1px solid black;
+        margin-right: 10px;
+        background-image: url('paramount.jpeg');
+        background-size: cover;
+        border-radius: 50%;
+        background-position-x: -60px;
+    }
+    #fun {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(5px);
+        padding: 5px; border-radius: 20px;
+        font-size: 12px;
+        height: 720px;
+    }
+    .credit {
+        display: none;
+        width: 100%;
+        border-radius: 20px;
+        background: linear-gradient(to bottom, transparent, #1e1e1e, #1e1e1e);
+        padding-top: 100px;
+        color: white;
+        padding-left: 20px;
+        padding-bottom: 5px;
+    }
+    .precentHtml {
+        width: 250px;
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid gray;
+        background-color: orange;
+        margin-right: 10px;
+        animation: fillProgress 1.5s ease forwards;
+    }
+    .precentCss {
+        width: 250px; 
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid gray;
+        margin-right: 10px;
+        background: linear-gradient(to right, blue 48%, #4796E3 48%);
+        background-size: 200% 100%;
+        background-position: 100% 0%;
+        animation: fillProgress 1.5s ease forwards;
+    }
+    .precentJs {
+        width: 250px; 
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid gray;
+        margin-right: 10px;
+        background: linear-gradient(to right, yellow 44.5%, #4796E3 44.5%);
+        background-size: 200% 100%;
+        background-position: 100% 0%;
+        animation: fillProgress 1.5s ease forwards;
+    }
+    .flexH2 {
+        display: flex;
+    }
+    </style>
+</head>
+<body class="main-bg">
+    
+    <div class="blur">
+        <div class="pp"></div>
+        <button class="masuk" onclick="unlock()">masuk</button>
+    </div>
+    
+    <div class="header">
+        <div class="txt-porto"><b>PORTOFOLIO</b></div>
+        <div class="theme" onclick="dark()"></div>
+    </div>
+    
+    <div class="menu" onclick="openMenu()">
+        <div class="lineMenu lm1"></div>
+        <div class="lineMenu lm2"></div>
+        <div class="lineMenu lm3"></div>
+    </div>
+    
+    <div class="isi-mn">
+        <a class="list l1" href="https://github.com/ave-tech/portofolio" target="_blank">GitHub</a>
+        <a class="list l2" href="https://youtube.com/@rock_solid_game?si=Id393BW8LE-5GYSz" target="_blank">Youtube</a>
+        <a class="list l3" href="https://discord.gg/Myn3KK4vW" target="_blank">Community</a>
+        <a class="list l4" href="https://sociabuzz.com/weeave/tribe" target="_blank">Support</a>
+    </div>
+    
+    <h1 class="waktu"></h1>
+    <div class="txt-contact">contact:</div>
+    <div class="contact">
+        <div class="item wa" onclick="owa()"></div>
+        <div class="item em" onclick="oem()"></div>
+        <div class="item ig" onclick="oig()"></div>
+    </div>
+    
+    <div class="notif">
+        <div class="inotif about">
+            <div class="iconAbt"></div>
+            <div class="txt-notif">
+                <b>About</b><br>
+                <i>Informasi tentang diri saya</i>
+            </div>
+            <a onclick="openAbout()" href="#about" class="go"><b>></b></a>
+        </div>
+        <div class="inotif Fproject">
+            <div class="iconCheck"></div>
+            <div class="txt-notif">
+                <b>completed projects</b><br>
+                <i>Project saya yang sudah 100% jadi</i>
+            </div>
+            <a href="#fproject" class="go"><b>></b></a>
+        </div>
+        <div class="inotif project">
+            <div class="iconProject"></div>
+            <div class="txt-notif">
+                <b>Project</b><br>
+                <i>Project dalam tahap development</i>
+            </div>
+            <a href="#project" class="go"><b>></b></a>
+        </div>
+        <div class="inotif fun">
+            <div class="iconFun"></div>
+            <div class="txt-notif">
+                <b>Other</b><br>
+                <i>Untuk informasi yang non formal</i>
+            </div>
+            <a href="#fun" class="go"><b>></b></a>
+        </div>
+    </div>
+    <section id="about">
+        <h1>About:</h1>
+        <div class="line"></div>
+        <div class="flexH">
+            <div class="char2"></div>
+            <div class="nama">Hi, aku<br><b>Alwi</b></div>
+        </div><br><br>
+        <div class="flexH">
+            <div class="umur nama"></div>
+            <div class="cake"></div>
+        </div>
+        <div class="flexH">
+            <div class="char3"></div>
+            <div class="awd"><b>saya,</b><br>terjun ke dunia<br><i>web design</i><br>di umur <b>16</b> <sup>tahun</sup></div>
+        </div>
+    </section> 
+    
+    <section id="fproject">
+        <h1>completed Project:</h1>
+        <div class="line"></div>
+        <div class="flexH">
+            <fieldset class="fp">
+                <legend>AVE Store</legend>
+                <div class="img-Fas"></div><br><br>
+                <div class="flexH">
+                    <p>Kunjungi sekarang</p>
+                    <a href="https://ave-tech.github.io/Store/" class="go"><b>></b></a>
+                </div>
+                <div class="flexH">
+                    <p>using:</p>
+                    <button class="codeBuble htm">HTML</button>
+                    <button class="codeBuble c2s">CSS</button>
+                    <button class="codeBuble jvs">JavaScript</button>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+    <section id="project">
+        <h1>project:</h1>
+        <div class="line"></div>
+        <fieldset class="fsproject">
+            <p>WebSite AVE Store</p>
+            <div class="flexH sideLeft">
+                <div class="progressBar"></div>
+                <p>86%</p>
+            </div>
+            <div class="flexH">
+                membutuhkan:
+                <div class="ketNeed">bug Fixes</div>
+                <div class="ketNeed">Remake All</div>
+            </div>
+        </fieldset><br><br>
+        <fieldset class="fsproject">
+            <p>WebSite Portofolio</p>
+            <div class="flexH sideLeft">
+                <div class="progressBar1"></div>
+                <p>90%</p>
+            </div>
+            <div class="flexH">
+                membutuhkan:
+                <div class="ketNeed">Nothing</div>
+            </div>
+        </fieldset>
+    </section>
+    
+    <section id="fun">
+        <h1>Other:</h1>
+        <p class="txt-fun">
+            saya adalah seorang gamer dari kecil hingga sekarang.<br>
+            walau saya masih sering keterbatasan device, saya biasanya bermodal nonton video gameplay orang lain.<br>
+            keterbatasan device saya ga cuma satu maupun dua hal saja.<br>
+            jika di device mobile, biasanya keterbatasan nya berupa performa, karena smartphone yang saya miliki selalu low end, jadi tidak bisa untuk bermain game yang lumayan berat.<br>
+            jika untuk device dekstop, seperti pc ataupun laptop, kok mikirin peforma, punya aja belum.<br>
+            jadi saya bikin web ini memang dari handphone saya, tapi nanti kalau mau bikin responsive ke dekstop mode! yaa, pinjam laptop kakak saya.<br>
+            itu pun laptop spec rendah banget, processor aja masih intel pentium.<br>
+            tapi walau keterbatasan device, justru itu yang membuat saya semangat!<br>
+            semangat punya device impian kedepan nya.
+        </p>
+        <div class="flexH">
+            <p class="txt-fun">
+                nah, untuk game favorit ku itu ga pasti, tapi yang jelas...<br>
+                sampai kapanpun saya ga akan pergi dari komunitas gamer!<br>
+                saya juga punya impian buat bikin video game sendiri!<br>
+                saya udah pernah nyoba bikin game di godot engine mobile<br>
+                eh tapi malah bingung sendiri sama game design nya:(<br>
+                ya tapi setidak nya aku tetep yakin kalau bisa jadi game developer<br>
+                semoga...
+            </p>
+            <div class="gameImg"></div>
+        </div><br>
+        <div class="flexH">
+            <div class="MovieImg"></div>
+            <p class="txt-fun">
+                selain suka main game, saya juga suka nonton movie.<br>
+                tapi saya ga terlalu ngikutin sih kalo movie, genre yang paling ku suka itu science fiction.<br>
+                yaa, Sci Fi kayak transformers atau movie dari marvel, movie barat lah, yang CGI nya luar biasa.<br>
+                aku sih pengen nya negaraku juga punya movie Sci Fi yang punya CGI sekelas mereka.<br>
+            </p>
+        </div>
+    </section><br>
+    <div class="credit">
+        website ini menggunakan HTML, CSS dan JS.<br><br>
+        HTML:
+        <div class="flexH2">
+            <div class="precentHtml"></div> 0% AI
+        </div><br>
+        CSS:
+        <div class="flexH2">
+            <div class="precentCss"></div> 4% AI
+        </div><br>
+        JS:
+        <div class="flexH2">
+            <div class="precentJs"></div> 11% AI
+        </div><br>
+        <br>
+        <b>Last Update:</b> <i><u>6 Mei 2026</u></i><br>
+        <b>Versi Update:</b> <i><u>2.0.36 [BETA]</u></i><br>
+        <br>
+        <details>
+            <summary>update active</summary>
+            <p style="color: gray;">update active adalah petunjuk bahwa web masih akan ada pembaruan kedepannya</p>
+        </details>
+    </div>
+    
+    <script src="general.js"></script>
+</body>
+</html>
