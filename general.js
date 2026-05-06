@@ -472,3 +472,7 @@ const presentShow = {
 
 const observer = new IntersectionObserver(munculkan, presentShow);
 targetSection.forEach(sec => observer.observe(sec));
+
+function owa() {window.location.href = 'https://wa.me/+6287722029327'}
+function oem() {window.location.href = 'mailto:akunutamawee@gmail.com'}
+function oig() {window.location.href = 'https://www.instagram.com/weeave3?igsh=ZGpldjgyNTRzdXE0'}
